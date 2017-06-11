@@ -11,6 +11,7 @@ require('./api/models/db');
 require('./api/config/passport');
 
 const routesAuth = require('./api/routes/authentication');
+const routesCrud = require('./api/routes/crud');
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(passport.initialize());
 
 app.use('/api', routesAuth);
+app.use('/api', routesCrud);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

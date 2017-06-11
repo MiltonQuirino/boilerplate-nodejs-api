@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const readLine = require('readline');
 
-let dbURI = 'mongodb://localhost/Loc8r';
+let dbURI = 'mongodb://localhost/Boilerplate';
 
 if(process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGOLAB_URI;
@@ -66,3 +66,4 @@ process.on('SIGTERM', () => {
 
 // put your models down in the code
 require('./users');
+require('./crud');
