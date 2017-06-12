@@ -67,3 +67,4 @@ process.on('SIGTERM', () => {
 // put your models down in the code
 require('./users');
 require('./crud');
+require('./crudauth');

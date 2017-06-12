@@ -5,12 +5,12 @@ const crudSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  address: String,
-  rating: {
+  description: String,
+  qtd: {
     type: Number,
     "default": 0,
     min: 0,
-    max: 5
+    max: 10
   }
 });
 
