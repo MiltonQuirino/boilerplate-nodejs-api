@@ -12,6 +12,7 @@ require('./api/config/passport');
 
 const routesAuth = require('./api/routes/authentication');
 const routesProduct = require('./api/routes/product.router'); 
+const routesArticleAuth = require('./api/routes/articleauth.router');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(passport.initialize());
 
 app.use('/api', routesAuth);
 app.use('/api', routesProduct);
+app.use('/api', routesArticleAuth);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

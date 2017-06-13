@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const CrudAuth = mongoose.model('CrudAuth');
+const ArticleAuth = mongoose.model('ArticleAuth');
 const User = mongoose.model('User');
 
 module.exports.crudAuthCreate = (req, res) => {
   getAuthor(req, res, (req, res, userName) => {
-    CrudAuth.create({
+    ArticleAuth.create({
       article: req.body.article,
       description: req.body.description, 
       user: userName
