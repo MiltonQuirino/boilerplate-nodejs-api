@@ -6,18 +6,18 @@ const auth = jwt({
   userProperty: 'payload'
 });
 
-const ctrlCrud = require('../controllers/crud');
+const ctrlProduct = require('../controllers/product.controller');
 const ctrlCrudAuth = require('../controllers/crudauth');
 
 /**
  * CRUD without authentication
  */
 
-router.get('/crud', ctrlCrud.crudList);
-router.get('/crud/:crudId', ctrlCrud.crudReadOne);
-router.post('/crud', ctrlCrud.create);
-router.put('/crud/:crudId', ctrlCrud.crudUpdateOne);
-router.delete('/crud/:crudId', ctrlCrud.crudDeleteOne);
+router.get('/product', ctrlProduct.productList);
+router.get('/product/:productId', ctrlProduct.productReadOne);
+router.post('/product', ctrlProduct.create);
+router.put('/product/:productId', ctrlProduct.productUpdateOne);
+router.delete('/product/:productId', ctrlProduct.productDeleteOne);
 
 /**
  * CRUD with authentication
